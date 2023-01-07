@@ -14,7 +14,7 @@
 
 * install mongoDB,set ssh key and set up the MongoDB server config file on each VM:
    
-   connect to VM's:
+   **connect to VM's**:
 
    gcloud compute ssh --zone "europe-west1-b" "mongodb-rs-wsq8"  --project "wideops-task-devops"
    
@@ -23,13 +23,13 @@
    gcloud compute ssh --zone "europe-west1-c" "mongodb-rs-2b1c"  --project "wideops-task-devops"
    
   
-  set ssh:
+  **Set SSH**:
   
   curl http://metadata.google.internal/computeMetadata/v1/instance/attributes/mongodb_ssh_priv_key -H "Metadata-Flavor: Google" > /home/ubuntu/.ssh/id_rsa
   chown ubuntu:ubuntu /home/ubuntu/.ssh/id_rsa
   chmod 600 /home/ubuntu/.ssh/id_rsa
   
-  install mongoDB: 
+  **Install mongoDB**: 
   
   sudo apt-get install gnupg
   
@@ -52,6 +52,15 @@
   echo "mongodb-enterprise-mongos hold" | sudo dpkg --set-selections
   
   echo "mongodb-enterprise-tools hold" | sudo dpkg --set-selections
+  
+  **set up the MongoDB server config**:
+  
+    sed -i 's/bindIp: 127\.0\.0\.1/bindIp: 0.0.0.0/g' /etc/mongod.conf
+  
+    cat >> /etc/mongod.conf <<EOF
+    replication:
+      replSetName: replicaset01
+  
   
   
   
