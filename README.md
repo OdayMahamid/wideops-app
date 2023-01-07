@@ -129,7 +129,11 @@
     
    <img width="888" alt="image" src="https://user-images.githubusercontent.com/58177069/211149213-9a5a1249-94fe-4cee-84f5-ebcde8072158.png">
 
-    
+## Resources
+
+ https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
+ https://www.mongodb.com/docs/manual/core/security-mongodb-configuration/
+ https://hevodata.com/learn/mongodb-replica-set-config/
     
     
   
