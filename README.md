@@ -94,6 +94,8 @@ EOF
   sudo service mongod restart
   
   mongo --norc --quiet --eval 'rs.status().members.forEach(function(member) {print(member["name"] + "\t" + member["stateStr"] + " \tuptime: " + member["uptime"] + "s")})'
+  
+  <img width="333" alt="image" src="https://user-images.githubusercontent.com/58177069/211147117-09db9106-2dc8-4daf-9e90-8f62ec3c893c.png">
 
   
   
