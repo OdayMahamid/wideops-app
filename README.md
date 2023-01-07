@@ -93,9 +93,9 @@
   
     rs.conf().members[2].arbiterOnly=true
   
-    rs.conf().members[0].arbiterOnly=true
+    rs.conf().members[0].arbiterOnly=false
   
-    rs.conf().members[1].arbiterOnly=true
+    rs.conf().members[1].arbiterOnly=false
   
     rs.reconfig(rs.conf())
   
