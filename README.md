@@ -1,23 +1,23 @@
 # **wideops-task** 
 
-## creating SSH key in order to make VM's ssh to each other:
+## Creating SSH key in order to make VM's ssh to each other:
 
  ssh-keygen -f /tmp/temp_id_rsa -C ubuntu@mongodb-rs
 
-## creating instance template:
+## Creating instance template:
 
    gcloud compute instance-templates create mongodb-replicaset-template --machine-type e2-medium --image-family ubuntu-1804-lts --image-project ubuntu-os-cloud --boot-     disk-type pd-ssd --boot-disk-size 25GB --tags mongodb-replicaset --scopes=https://www.googleapis.com/auth/cloud-platform --metadata mongodb_ssh_priv_key="$(cat          /tmp/temp_id_rsa)",mongodb_ssh_pub_key="$(cat /tmp/temp_id_rsa.pub)"
 
   <img width="999" alt="image" src="https://user-images.githubusercontent.com/58177069/211147408-2da7abbc-6b1b-46bf-b6a9-e35cb44be7ef.png">
 
-## creating instance group:
+## Creating instance group:
 
   gcloud compute instance-groups managed create mongodb-replicaset --base-instance-name mongodb-rs --size 3 --region europe-west1 --template mongodb-replicaset-template
   
   <img width="999" alt="image" src="https://user-images.githubusercontent.com/58177069/211147483-97c65a0f-ea38-4aca-8aea-615c2370f623.png">
 
 
-## install mongoDB,set ssh key and set up the MongoDB server config file on each VM:
+## Install mongoDB,set ssh key and set up the MongoDB server config file on each VM:
    
    * **connect to VM's**:
 
