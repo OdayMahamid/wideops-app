@@ -110,6 +110,10 @@
    <img width="888" alt="image" src="https://user-images.githubusercontent.com/58177069/211147656-cfea594d-895a-49a3-b3e9-d0d992c834db.png">
    
 ## Deploy app on GKE:
+   * **Build and push the Image to Container Registry:**
+    
+    gcloud builds submit --tag gcr.io/wideops-task-devops/nodeapp1
+      
    * **create cluster:**
     
     gcloud container clusters create nodeapp-cluster --machine-type e2-medium--num-nodes 3 \
