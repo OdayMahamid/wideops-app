@@ -68,7 +68,7 @@
 EOF
     
     
-## set secondary node to arbiter node:
+## Set secondary node to arbiter node:
   connecting to first instance
   Mongo
   
