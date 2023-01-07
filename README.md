@@ -60,6 +60,46 @@
     cat >> /etc/mongod.conf <<EOF
     replication:
       replSetName: replicaset01
+EOF
+    
+    
+## set secondary node to arbiter node:
+  connecting to first instance
+  Mongo
+  
+  rs.initiate({ _id: "replicaset01", members: [ { _id: 0, host: "34.76.48.76" }, { _id: 1, host: "35.189.229.167" }, { _id: 2, host: "35.189.198.91" } ] })
+  
+  rs.remove("35.189.198.91:27017")
+  
+  rs.addArb("35.189.198.91:27017")
+  
+  Mongo
+  
+  rs.conf() 
+ 
+  rs.conf().members[2].priority = 0
+  
+  rs.conf().members[0].priority = 5
+  
+  rs.conf().members[1].priority = 10
+  
+  rs.conf().members[2].arbiterOnly=true
+  
+  rs.conf().members[0].arbiterOnly=true
+  
+  rs.conf().members[1].arbiterOnly=true
+  
+  rs.reconfig(rs.conf())
+  
+  sudo service mongod restart
+  
+  mongo --norc --quiet --eval 'rs.status().members.forEach(function(member) {print(member["name"] + "\t" + member["stateStr"] + " \tuptime: " + member["uptime"] + "s")})'
+
+  
+  
+  
+     
+      
   
   
   
