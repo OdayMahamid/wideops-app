@@ -139,6 +139,8 @@
  https://www.mongodb.com/docs/manual/core/security-mongodb-configuration/
  
  https://hevodata.com/learn/mongodb-replica-set-config/
+ 
+ https://subscription.packtpub.com/book/big-data-and-business-intelligence/9781787126480/4/ch04lvl1sec41/changing-priority-to-replica-set-nodes
     
     
   
