@@ -128,7 +128,7 @@
   
    * **Create Deployment**
     
-    kubectl create deployment nodeapp1 --image=gcr.io/wideops-task-aoo/nodeapp1
+    kubectl create deployment nodeapp1 --image=gcr.io/wideops-task-devops/nodeapp1
 
     kubectl expose deployment nodeapp1 --type=LoadBalancer --port 80 --target-port 3000
 
