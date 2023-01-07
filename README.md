@@ -132,7 +132,9 @@
 ## Resources
 
  https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
+ 
  https://www.mongodb.com/docs/manual/core/security-mongodb-configuration/
+ 
  https://hevodata.com/learn/mongodb-replica-set-config/
     
     
