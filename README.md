@@ -30,6 +30,7 @@
   
   * **Set SSH**:
   
+        curl http://metadata.google.internal/computeMetadata/v1/instance/attributes/mongodb_ssh_pub_key -H "Metadata-Flavor: Google" >> /home/ubuntu/.ssh/authorized_keys
         curl http://metadata.google.internal/computeMetadata/v1/instance/attributes/mongodb_ssh_priv_key -H "Metadata-Flavor: Google" > /home/ubuntu/.ssh/id_rsa
         chown ubuntu:ubuntu /home/ubuntu/.ssh/id_rsa
         chmod 600 /home/ubuntu/.ssh/id_rsa
@@ -136,21 +137,21 @@
     
    <img width="888" alt="image" src="https://user-images.githubusercontent.com/58177069/211149213-9a5a1249-94fe-4cee-84f5-ebcde8072158.png">
    
-   for https:
+   * **for https:**
    
    create ssl
    
-    openssl req -x509 -nodes -days 9999 -newkey rsa:2048 -keyout ingress-tls.key -out ingress-tls.crt
+     openssl req -x509 -nodes -days 9999 -newkey rsa:2048 -keyout ingress-tls.key -out ingress-tls.crt
     
    create secret
     
-    kubectl create secret tls ingress-cert --key=ingress-tls.key --cert=ingress-tls.crt -o yaml
+     kubectl create secret tls ingress-cert --key=ingress-tls.key --cert=ingress-tls.crt -o yaml
     
    <img width="443" alt="image" src="https://user-images.githubusercontent.com/58177069/211175228-aeafdad8-5378-4cf2-a1ba-e515165bb998.png">
    
    <img width="196" alt="image" src="https://user-images.githubusercontent.com/58177069/211175341-1168208a-67b0-4d49-a064-f0d4ecd5f11a.png">
 
-    kubectl apply -f Ingress.yaml
+     kubectl apply -f Ingress.yaml
 
 
    
