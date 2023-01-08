@@ -158,6 +158,8 @@
 
 ## Resources
 
+ https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
+ 
  https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
  
  https://www.mongodb.com/docs/manual/core/security-mongodb-configuration/
