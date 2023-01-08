@@ -141,6 +141,15 @@
    create ssl
    
     openssl req -x509 -nodes -days 9999 -newkey rsa:2048 -keyout ingress-tls.key -out ingress-tls.crt
+    
+   create secret
+    
+    kubectl create secret tls ingress-cert --key=ingress-tls.key --cert=ingress-tls.crt -o yaml
+    
+   <img width="443" alt="image" src="https://user-images.githubusercontent.com/58177069/211175228-aeafdad8-5378-4cf2-a1ba-e515165bb998.png">
+
+    kubectl apply -f Ingress.yaml
+
 
    
    <img width="333" alt="image" src="https://user-images.githubusercontent.com/58177069/211172897-cd91c896-e039-4c46-90e6-00f78c2bbd29.png">
