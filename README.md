@@ -71,10 +71,7 @@
     
 ## Set secondary node to arbiter node:
   connecting to first instance
-  Mongo
-  
-    rs.add(“35.189.198.91:27017”)
-    rs.add(“35.189.229.167:27017”)
+    Mongo
   
     rs.initiate({ _id: "replicaset01", members: [ { _id: 0, host: "34.76.48.76" }, { _id: 1, host: "35.189.229.167" }, { _id: 2, host: "35.189.198.91" } ] })
   
