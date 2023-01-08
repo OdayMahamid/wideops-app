@@ -147,6 +147,8 @@
     kubectl create secret tls ingress-cert --key=ingress-tls.key --cert=ingress-tls.crt -o yaml
     
    <img width="443" alt="image" src="https://user-images.githubusercontent.com/58177069/211175228-aeafdad8-5378-4cf2-a1ba-e515165bb998.png">
+   
+   <img width="196" alt="image" src="https://user-images.githubusercontent.com/58177069/211175341-1168208a-67b0-4d49-a064-f0d4ecd5f11a.png">
 
     kubectl apply -f Ingress.yaml
 
