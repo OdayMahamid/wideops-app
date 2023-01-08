@@ -135,7 +135,7 @@
 
     kubectl scale deployment nodeapp1 --replicas=3
     
-   <img width="888" alt="image" src="https://user-images.githubusercontent.com/58177069/211149213-9a5a1249-94fe-4cee-84f5-ebcde8072158.png">
+   <img width="443" alt="image" src="https://user-images.githubusercontent.com/58177069/211149213-9a5a1249-94fe-4cee-84f5-ebcde8072158.png">
    
    * **for https:**
    
