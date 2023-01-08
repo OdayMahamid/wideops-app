@@ -6,7 +6,7 @@
 
 ## Creating instance template:
 
-    gcloud compute instance-templates create mongodb-replicaset-template1 --machine-type e2-medium --image-family ubuntu-1804-lts --image-project ubuntu-os-cloud --boot-     disk-type pd-ssd --boot-disk-size 25GB --tags mongodb-replicaset --scopes=https://www.googleapis.com/auth/cloud-platform --metadata mongodb_ssh_priv_key="$(cat /tmp/temp_id_rsa)",mongodb_ssh_pub_key="$(cat /tmp/temp_id_rsa.pub)"
+    gcloud compute instance-templates create mongodb-replicaset-template1 --machine-type e2-medium --image-family ubuntu-1804-lts --image-project ubuntu-os-cloud --boot-disk-type pd-ssd --boot-disk-size 25GB --tags mongodb-replicaset --scopes=https://www.googleapis.com/auth/cloud-platform --metadata mongodb_ssh_priv_key="$(cat /tmp/temp_id_rsa)",mongodb_ssh_pub_key="$(cat /tmp/temp_id_rsa.pub)"
 
   <img width="999" alt="image" src="https://user-images.githubusercontent.com/58177069/211147408-2da7abbc-6b1b-46bf-b6a9-e35cb44be7ef.png">
 
