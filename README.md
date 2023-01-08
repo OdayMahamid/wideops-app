@@ -132,8 +132,9 @@
     kubectl create deployment nodeapp1 --image=gcr.io/wideops-task-devops/nodeapp1
 
     kubectl expose deployment nodeapp1 --type=LoadBalancer --port 80 --target-port 3000
+    
+    kubectl autoscale deployment nodeapp1 --max 10 --min 2
 
-    kubectl scale deployment nodeapp1 --replicas=3
     
    <img width="443" alt="image" src="https://user-images.githubusercontent.com/58177069/211149213-9a5a1249-94fe-4cee-84f5-ebcde8072158.png">
    
