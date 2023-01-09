@@ -152,8 +152,6 @@
     kubectl apply -f Ingress.yaml
 
 
-   
-   <img width="333" alt="image" src="https://user-images.githubusercontent.com/58177069/211172897-cd91c896-e039-4c46-90e6-00f78c2bbd29.png">
 
 
 ## Resources
