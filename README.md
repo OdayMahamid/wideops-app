@@ -2,7 +2,7 @@
 
 ## Creating SSH key in order to make VM's ssh to each other:
 
-    ssh-keygen -f /tmp/temp_id_rsa -C ubuntu@mongodb-rs
+    ssh-keygen -f /tmp/temp_id_rsa
 
 ## Creating instance template:
 
