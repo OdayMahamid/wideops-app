@@ -1,22 +1,16 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: myingress
-  namespace: default
+  name: managed-cert-ingress
+  annotations:
+    networking.gke.io/managed-certificates: managed-cert
 spec:
-  ingressClassName: node
+  defaultBackend:
+    service:
+      name: nodeapp2
+      port:
+        number: 80
   tls:
   - hosts:
-    - www.ingress-tls.com
+    - localhost.com
     secretName: ingress-cert
-  rules:
-  - host: "www.ingress-tls.com"
-    http:
-      paths:
-        - pathType: Prefix
-          path: "/"
-          backend:
-            service:
-              name: nodeapp1
-              port:
-                number: 80
