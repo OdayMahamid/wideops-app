@@ -126,11 +126,11 @@
   
    * **Create Deployment**
     
-    kubectl create deployment nodeapp1 --image=gcr.io/wideops-task-devops/nodeapp1
+    kubectl create deployment nodeapp2 --image=gcr.io/wideops-task-devops/nodeapp1
 
-    kubectl expose deployment nodeapp1 --type=LoadBalancer --port 80 --target-port 3000
+    kubectl expose deployment nodeapp2 --type=LoadBalancer --port 80 --target-port 3000
     
-    kubectl autoscale deployment nodeapp1 --max 10 --min 2
+    kubectl autoscale deployment nodeapp2 --max 10 --min 2
 
     
    
